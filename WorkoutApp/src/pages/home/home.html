@@ -14,10 +14,10 @@
      Workout
     </ion-col>
     <ion-col>
-    Number of Sets
+    Sets
     </ion-col>
     <ion-col>
-    Number of Reps
+    Reps
     </ion-col>
   </ion-row>
   <ion-row>
@@ -26,13 +26,13 @@
     </ion-col>
     <ion-col>
       {{sets}} 
-      <button ion-button outline icon-only (click) = "incrementSets()">
+      <button ion-button outline icon-only small (click) = "incrementSets()">
         <ion-icon name="add"></ion-icon>
       </button> 
     </ion-col>
     <ion-col>
       {{repetition}} 
-      <button ion-button outline icon-only (click) = "incrementReps()">
+      <button ion-button outline icon-only small (click) = "incrementReps()">
         <ion-icon name="add"></ion-icon>
       </button> 
     </ion-col>
