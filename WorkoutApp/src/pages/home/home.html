@@ -7,5 +7,30 @@
 <ion-content padding>
     <br><br>
  <button ion-button (click) = "increment()">Increase</button>
-  {{counter}}
+  
+
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+     Workout
+    </ion-col>
+    <ion-col>
+      Number of Sets
+    </ion-col>
+    <ion-col>
+      Number of Reps
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+     Shoulder Press
+    </ion-col>
+    <ion-col>
+      3
+    </ion-col>
+    <ion-col>
+     {{counter}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
