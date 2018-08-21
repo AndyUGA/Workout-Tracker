@@ -7,15 +7,22 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  private counter : number;
+  private repetition : number;
+  private sets : number;
     
   constructor(public navCtrl: NavController) {
-    this.counter = 0;
+    this.repetition = 0;
+    this.sets = 0;
 
     }
 
-  increment() 
+  incrementReps() 
   {
-    this.counter += 1;
+    this.repetition += 1;
+  }
+
+  incrementSets() 
+  {
+    this.sets += 1;
   }
 }

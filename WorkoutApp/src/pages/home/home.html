@@ -6,7 +6,6 @@
 
 <ion-content padding>
     <br><br>
- <button ion-button (click) = "increment()">Increase</button>
   
 
   <ion-grid>
@@ -15,22 +14,25 @@
      Workout
     </ion-col>
     <ion-col>
-      Number of Sets
+    Number of Sets
     </ion-col>
     <ion-col>
-      Number of Reps
+    Number of Reps
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
-     Shoulder Press
+    Shoulder Press
     </ion-col>
     <ion-col>
-      3
+       {{sets}} <button ion-button (click) = "incrementSets()">Increase</button>
     </ion-col>
     <ion-col>
-     {{counter}}
+     {{repetition}} <button ion-button (click) = "incrementReps()">Increase</button>
     </ion-col>
+  
+
   </ion-row>
+
 </ion-grid>
 </ion-content>
