@@ -9,6 +9,7 @@ export class HomePage {
 
   private repetition : number;
   private sets : number;
+  private test : any;
     
   constructor(public navCtrl: NavController) {
     this.repetition = 0;
