@@ -25,10 +25,16 @@
     Shoulder Press
     </ion-col>
     <ion-col>
-       {{sets}} <button ion-button (click) = "incrementSets()">Increase</button>
+      {{sets}} 
+      <button ion-button outline icon-only (click) = "incrementSets()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
     </ion-col>
     <ion-col>
-     {{repetition}} <button ion-button (click) = "incrementReps()">Increase</button>
+      {{repetition}} 
+      <button ion-button outline icon-only (click) = "incrementReps()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
     </ion-col>
   
 
