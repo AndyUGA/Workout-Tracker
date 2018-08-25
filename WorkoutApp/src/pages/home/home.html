@@ -31,11 +31,29 @@
       </button> 
     </ion-col>
     <ion-col>
+
       {{repetition}} 
+
       <button ion-button outline icon-only small (click) = "incrementReps()">
         <ion-icon name="add"></ion-icon>
       </button> 
     </ion-col>
+
+
+    <ion-grid>
+    <ion-row *ngFor="let row of rows">
+      <ion-col>
+        {{ row?.firstCol }} 
+         <button ion-button outline icon-only small (click) = "incrementSets()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
+      </ion-col>
+      <ion-col>
+        {{ row?.secondCol }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button ion-button (click)="addrow()">Add a row</button>
 
 
   
