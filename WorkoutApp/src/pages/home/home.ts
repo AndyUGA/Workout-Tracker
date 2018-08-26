@@ -12,7 +12,7 @@ export class HomePage {
   private test : any;
 
 
-  public rows: Array<{ firstCol: string, secondCol: string }> = [];
+  public rows: Array<{ firstCol: string, secondCol: string, thirdCol: string }> = [];
 
 
 
@@ -38,6 +38,6 @@ export class HomePage {
 
 
   public addrow(): void {
-    this.rows.push({ firstCol: '1 of 2', secondCol: '2 of 2' });
+    this.rows.push({ firstCol: 'Name of Workout', secondCol: 'Number of sets:', thirdCol: 'Number of reps:' });
   }
 }
