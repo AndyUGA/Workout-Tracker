@@ -26,18 +26,18 @@ export class HomePage {
 
     }
 
-  incrementReps() 
+  incrementReps(rCounter) 
   {
-    this.repetition += 1;
+    rCounter += 1;
   }
 
-  incrementSets() 
+  incrementSets(rCounter) 
   {
-    this.sets += 1;
+    rCounter += 1;
   }
 
 
   public addrow(): void {
-    this.rows.push({ firstCol: 'Name of Workout', secondCol: 'Number of sets:', thirdCol: 'Number of reps:' });
+    this.rows.push({ firstCol: 'Name of Workout', secondCol: 'Number of sets:', thirdCol: 'Number of reps:', counter: 0});
   }
 }
