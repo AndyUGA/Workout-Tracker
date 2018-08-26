@@ -28,18 +28,18 @@
     <ion-grid>
     <ion-row *ngFor="let row of rows">
       <ion-col>
-        {{ row?.firstCol }} <br>Counter is : {{row.counter}}
+        <input type="text" name="input" >
       </ion-col>
       <ion-col>
-        {{ row?.secondCol }}   
+        {{ row?.secondCol }}   Counter is : {{row.counter}}
          <button ion-button outline icon-only small (click) = "incrementSets(row.counter)">
         <ion-icon name="add"></ion-icon>
       </button> 
    
       </ion-col>
        <ion-col>
-        {{ row?.thirdCol }} 
-         <button ion-button outline icon-only small (click) = "incrementReps()">
+        {{ row?.thirdCol }} Counter is : {{row.counter}}
+         <button ion-button outline icon-only small (click) = "incrementReps(row.counter)">
         <ion-icon name="add"></ion-icon>
       </button> 
       
