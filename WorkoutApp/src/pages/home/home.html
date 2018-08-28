@@ -15,9 +15,15 @@
     </ion-col>
     <ion-col>
     Sets
+    <button ion-button outline icon-only small (click) = "incrementSets()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
     </ion-col>
     <ion-col>
     Reps
+     <button ion-button outline icon-only small (click) = "incrementReps()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
     </ion-col>
   </ion-row>
   <ion-row>
@@ -32,21 +38,17 @@
       </ion-col>
       <ion-col>
         {{ row?.secondCol }}  {{row.setCounter}}
-         <button ion-button outline icon-only small (click) = "incrementSets()">
-        <ion-icon name="add"></ion-icon>
-      </button> 
+         
    
       </ion-col>
        <ion-col>
         {{ row?.thirdCol }} {{row.repCounter}}
-         <button ion-button outline icon-only small (click) = "incrementReps()">
-        <ion-icon name="add"></ion-icon>
-      </button> 
+        
       
       </ion-col>
     </ion-row>
   </ion-grid>
-  <button ion-button (click)="addrow()">Add a row</button>
+  <button ion-button (click)="addrow()">Add Workout</button>
 
 
   

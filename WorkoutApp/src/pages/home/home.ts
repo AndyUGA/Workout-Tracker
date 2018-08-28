@@ -28,7 +28,6 @@ export class HomePage {
 
   incrementReps() 
   {
-    
     this.rows[this.counter].repCounter += 1;
   }
 
