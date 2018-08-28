@@ -31,15 +31,15 @@
         <input type="text" name="input" >
       </ion-col>
       <ion-col>
-        {{ row?.secondCol }}   Counter is : {{row.counter}}
-         <button ion-button outline icon-only small (click) = "incrementSets(row.counter)">
+        {{ row?.secondCol }}  {{row.setCounter}}
+         <button ion-button outline icon-only small (click) = "incrementSets()">
         <ion-icon name="add"></ion-icon>
       </button> 
    
       </ion-col>
        <ion-col>
-        {{ row?.thirdCol }} Counter is : {{row.counter}}
-         <button ion-button outline icon-only small (click) = "incrementReps(row.counter)">
+        {{ row?.thirdCol }} {{row.repCounter}}
+         <button ion-button outline icon-only small (click) = "incrementReps()">
         <ion-icon name="add"></ion-icon>
       </button> 
       

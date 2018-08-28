@@ -10,9 +10,9 @@ export class HomePage {
   private repetition : number;
   private sets : number;
   private test : any;
+  private counter : number;
 
-
-  public rows: Array<{ firstCol: string, secondCol: string, thirdCol: string }> = [];
+  public rows: Array<{ firstCol: string, secondCol: string, thirdCol: string, setCounter: number, repCounter : number}> = [];
 
 
 
@@ -23,23 +23,23 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
     this.repetition = 0;
     this.sets = 0;
-
+    this.counter = -1;
     }
 
-  incrementReps(rCounter) 
+  incrementReps() 
   {
-    console.log(rCounter);
-    rCounter += 1;
+    
+    this.rows[this.counter].repCounter += 1;
   }
 
   incrementSets(rCounter) 
   {
-    console.log(rCounter);
-    rCounter += 1;
+    this.rows[this.counter].setCounter += 1;
   }
 
 
   public addrow(): void {
-    this.rows.push({ firstCol: 'Name of Workout', secondCol: 'Number of sets:', thirdCol: 'Number of reps:', counter: 2});
+    this.rows.push({ firstCol: 'Name of Workout', secondCol: 'Number of sets:', thirdCol: 'Number of reps:', setCounter: 0, repCounter : 0});
+    this.counter += 1;
   }
 }
