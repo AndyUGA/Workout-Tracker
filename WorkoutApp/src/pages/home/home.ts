@@ -36,6 +36,15 @@ export class HomePage {
     this.rows[this.counter].setCounter += 1;
   }
 
+  decrementReps() 
+  {
+    this.rows[this.counter].repCounter -= 1;
+  }
+
+  decrementSets(rCounter) 
+  {
+    this.rows[this.counter].setCounter -= 1;
+  }
 
   public addrow(): void {
     this.rows.push({ firstCol: 'Name of Workout', secondCol: 'Number of sets:', thirdCol: 'Number of reps:', setCounter: 0, repCounter : 0});

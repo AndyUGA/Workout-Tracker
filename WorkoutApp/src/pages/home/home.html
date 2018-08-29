@@ -18,11 +18,17 @@
     <button ion-button outline icon-only small (click) = "incrementSets()">
         <ion-icon name="add"></ion-icon>
       </button> 
+      <button ion-button outline icon-only small (click) = "incrementSets()">
+        <ion-icon name="remove"></ion-icon>
+      </button> 
     </ion-col>
     <ion-col>
     Reps
      <button ion-button outline icon-only small (click) = "incrementReps()">
         <ion-icon name="add"></ion-icon>
+      </button> 
+      <button ion-button outline icon-only small (click) = "incrementReps()">
+        <ion-icon name="remove"></ion-icon>
       </button> 
     </ion-col>
   </ion-row>
@@ -48,7 +54,7 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <button ion-button (click)="addrow()">Add Workout</button>
+  <button ion-button (click)="addrow()">Add a workout</button>
 
 
   
