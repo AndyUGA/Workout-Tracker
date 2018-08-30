@@ -7,10 +7,10 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  private repetition : number;
-  private sets : number;
-  private test : any;
-  private counter : number;
+  public repetition : number;
+  public sets : number;
+
+  public counter : number;
 
   public rows: Array<{ firstCol: string, secondCol: string, thirdCol: string, setCounter: number, repCounter : number}> = [];
 
