@@ -47,7 +47,7 @@ export class HomePage {
   }
 
   public addrow(): void {
-    this.rows.push({ firstCol: 'Name of Workout', secondCol: 'Sets:', thirdCol: 'Reps:', setCounter: 0, repCounter : 0});
+    this.rows.push({ firstCol: 'Weight', secondCol: 'Sets:', thirdCol: 'Reps:', setCounter: 0, repCounter : 0});
     this.counter += 1;
   }
 }

@@ -38,7 +38,10 @@
     <ion-grid>
     <ion-row *ngFor="let row of rows">
       <ion-col>
-        <input type="text" name="input" >
+
+        <input type="text" name="input"> 
+
+
       </ion-col>
       <ion-col>
         {{ row?.secondCol }}  {{row.setCounter}}
@@ -50,6 +53,7 @@
         
       
       </ion-col>
+      
     </ion-row>
   </ion-grid>
   <button ion-button (click)="addrow()">Add a workout</button>
