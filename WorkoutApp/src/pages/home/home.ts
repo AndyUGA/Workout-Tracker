@@ -46,6 +46,15 @@ export class HomePage {
     this.rows[this.counter].setCounter -= 1;
   }
 
+  editPrev() 
+  {
+    if((this.counter - 1) != -1)
+    {
+      this.counter -= 1;
+    }
+    
+  }
+
   public addrow(): void {
     this.rows.push({ firstCol: 'Weight:', secondCol: 'Sets:', thirdCol: 'Reps:', setCounter: 0, repCounter : 0});
     this.counter += 1;
