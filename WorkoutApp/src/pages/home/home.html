@@ -36,16 +36,17 @@
 
 
     <ion-grid>
+      <ion-label>Workout</ion-label>
     <ion-row *ngFor="let row of rows">
       <ion-col>
         <ion-item>
-  <ion-label>Gender</ion-label>
+
   <ion-select [(ngModel)]="gender">
-    <ion-option value="f">Female</ion-option>
-    <ion-option value="m">Male</ion-option>
+    <ion-option value="f">Leg Press</ion-option>
+    <ion-option value="m">Bench Press</ion-option>
   </ion-select>
 </ion-item>
-        <input type="text" name="input"> 
+
 
 
       </ion-col>
