@@ -7,44 +7,47 @@
 <ion-content padding>
     <br><br>
 
-
-  <ion-grid>
-    <ion-row>
-    <ion-col>
-    Sets
-    <button ion-button outline icon-only  (click) = "incrementSets()">
-        <ion-icon name="add"></ion-icon>
-      </button> 
-      <button ion-button outline icon-only  (click) = "decrementSets()">
-        <ion-icon name="remove"></ion-icon>
-      </button> 
-    </ion-col>
-    <ion-col>
-    Reps
-     <button ion-button outline icon-only  (click) = "incrementReps()">
-        <ion-icon name="add"></ion-icon>
-      </button> 
-      <button ion-button outline icon-only  (click) = "decrementReps()">
-        <ion-icon name="remove"></ion-icon>
-      </button> 
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-grid>
+<ion-grid>
       <ion-row *ngFor="let row of rows">
         <ion-card>
           <ion-card-content>
+            <div class = "item">
             <ion-input class = "label" placeholder="Name of Workout"></ion-input>
+
             {{ row?.firstCol }}  
-            <ion-input placeholder="Weight"></ion-input>
+            </div>
+            <ion-input type = "tel"placeholder="Weight"></ion-input>
             {{ row?.secondCol }}  {{ row.setCounter }}
             {{ row?.thirdCol }}   {{ row.repCounter }}
           </ion-card-content>
         </ion-card>
       </ion-row>
     </ion-grid>
-    <button ion-button (click) = "editPrev()"> Edit Previous </button>
-    <button ion-button (click)="addrow()">Add a workout</button>
+  <ion-grid>
+    <ion-row>
+    <ion-col>
+    Sets
+    <button ion-button outline small icon-only  (click) = "incrementSets()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
+      <button ion-button outline icon-only small (click) = "decrementSets()">
+        <ion-icon name="remove"></ion-icon>
+      </button> 
+    </ion-col>
+    <ion-col>
+    Reps
+     <button ion-button outline icon-only small  (click) = "incrementReps()">
+        <ion-icon name="add"></ion-icon>
+      </button> 
+      <button ion-button outline icon-only small (click) = "decrementReps()">
+        <ion-icon name="remove"></ion-icon>
+      </button> 
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    
+    <button ion-button small (click) = "editPrev()"> Edit Previous </button>
+    <button ion-button small (click)="addrow()">Add a workout</button>
   </ion-row>
 </ion-grid>
 </ion-content>
