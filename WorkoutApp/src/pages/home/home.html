@@ -40,26 +40,32 @@
     <ion-row *ngFor="let row of rows">
       <ion-col>
         <ion-item>
-
-  <ion-select [(ngModel)]="gender">
-    <ion-option value="f">Leg Press</ion-option>
-    <ion-option value="m">Bench Press</ion-option>
-  </ion-select>
-</ion-item>
-
-
-
+          <ion-select [(ngModel)]="gender">
+            <ion-option value="f">Leg Press</ion-option>
+            <ion-option value="m">Bench Press</ion-option>
+          </ion-select>
+        </ion-item>
       </ion-col>
       <ion-col>
         {{ row?.secondCol }}  {{row.setCounter}}
-         {{ row?.thirdCol }} {{row.repCounter}}
-   
+        {{ row?.thirdCol }} {{row.repCounter}}
       </ion-col>
-       <ion-col>
-         
-      
+      <ion-col>
+        
       </ion-col>
-      
+
+      <ion-card>
+
+  <ion-card-header>
+    Bench Press
+  </ion-card-header>
+
+  <ion-card-content>
+    {{ row?.secondCol }}  {{ row.setCounter }}
+    {{ row?.thirdCol }}   {{ row.repCounter }}
+  </ion-card-content>
+
+</ion-card>
     </ion-row>
   </ion-grid>
 
