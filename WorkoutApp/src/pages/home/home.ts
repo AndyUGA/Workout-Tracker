@@ -11,6 +11,7 @@ export class HomePage {
   public sets : number;
 
   public counter : number;
+  public totalCards : number;
 
   public rows: Array<{ firstCol: string, secondCol: string, thirdCol: string, setCounter: number, repCounter : number}> = [];
 
@@ -24,6 +25,7 @@ export class HomePage {
     this.repetition = 5;
     this.sets = 0;
     this.counter = -1;
+    this.totalCards = 0;
     }
 
   incrementReps() 
@@ -57,6 +59,18 @@ export class HomePage {
 
   public addrow(): void {
     this.rows.push({ firstCol: 'Weight:', secondCol: 'Sets:', thirdCol: 'Reps:', setCounter: 0, repCounter : 0});
-    this.counter += 1;
+
+    if(this.counter + 1 != this.totalCards)
+    {
+      this.counter = this.totalCards;
+    }
+    else
+    {
+      this.counter += 1;
+      this.totalCards += 1;
+    }
+    
+
+
   }
 }
