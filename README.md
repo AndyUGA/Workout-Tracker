@@ -10,7 +10,9 @@ A mobile app that helps keep track of progress during a workout session
 ------------------------------------------------------------------------------------------------------------------------------  
 
 ## Technologies utitilized in this project:
-- Ionic 3 (https://ionicframework.com)
+- [Ionic 3](https://ionicframework.com)
+- [Angular 4](https://angular.io)
+- [Bootstrap](https://getbootstrap.com) 
 - TypeScript
 - Apache Cordova 
-- Angular 4(https://angular.io)
+
