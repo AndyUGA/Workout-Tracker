@@ -12,17 +12,21 @@
         <ion-card>
           <ion-card-content>
             <div class = "item">
-            <ion-input class = "label" placeholder="Name of Workout"></ion-input>
-
-            {{ row?.firstCol }}  
+            <ion-input  class = "label" [(ngModel)] = "workout"placeholder="Name of Workout"></ion-input>           
             </div>
+
             <ion-input type = "tel"placeholder="Weight"></ion-input>
-            {{ row?.secondCol }}  {{ row.setCounter }}
-            {{ row?.thirdCol }}   {{ row.repCounter }}
+
+
+
+             Sets: {{ row?.secondCol }}  {{ row.setCounter }}
+            Reps: {{ row?.thirdCol }}   {{ row.repCounter }}
           </ion-card-content>
         </ion-card>
       </ion-row>
     </ion-grid>
+
+
   <ion-grid>
     <ion-row>
     <ion-col>
@@ -48,6 +52,7 @@
     
     <button ion-button small (click) = "editPrev()"> Edit Previous </button>
     <button ion-button small (click)="addrow()">Add a workout</button>
+     <button ion-button small (click)="printArray()">Print</button>
   </ion-row>
 </ion-grid>
 </ion-content>

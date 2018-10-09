@@ -13,8 +13,8 @@ export class HomePage {
   public counter : number;
   public totalCards : number;
 
-  public rows: Array<{ firstCol: string, secondCol: string, thirdCol: string, setCounter: number, repCounter : number}> = [];
-
+  public rows: Array<{ Workout: string, setCounter: number, repCounter : number}> = [];
+  workout: String = "";
 
 
 
@@ -57,8 +57,8 @@ export class HomePage {
     
   }
 
-  public addrow(): void {
-    this.rows.push({ firstCol: 'Weight:', secondCol: 'Sets:', thirdCol: 'Reps:', setCounter: 0, repCounter : 0});
+  private addrow(){
+    this.rows.push({ Workout: this.workout, setCounter: 0, repCounter : 0});
 
     if(this.counter + 1 != this.totalCards)
     {
@@ -70,7 +70,19 @@ export class HomePage {
       this.totalCards += 1;
     }
     
+  }
+
+  private printArray() {
+
+    console.log("This counter is: " + this.counter);
+    for(var i = -1; i < this.counter; i++)
+    {
+      console.log(this.rows[i+1]);
+    }
+    console.log("printArray button has been pressed!");
+    console.log(this.workout);
 
 
   }
+
 }
