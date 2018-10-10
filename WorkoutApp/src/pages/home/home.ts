@@ -16,8 +16,8 @@ export class HomePage {
   public counter : number;
   public totalCards : number;
 
-  public rows: Array<{ Workout: string, setCounter: number, repCounter : number}> = [];
-  public copyRows: Array<{ Workout: string, setCounter: number, repCounter : number}> = [];
+  public rows: Array<{ name: string, setCounter: number, repCounter : number}> = [];
+  public copyRows: Array<{ name: string, setCounter: number, repCounter : number}> = [];
   workout: string = "";
 
 
@@ -72,14 +72,16 @@ export class HomePage {
 
     if(this.counter != -1){
        console.log("Copying " + this.workout + " to this.copyRows")
-       this.copyRows[this.forCounter - 1].Workout = this.workout;
+       
        this.copyRows[this.forCounter] = this.rows[0];
+       this.copyRows[0].name = this.workout;
        this.rows.pop();
        this.forCounter++;
        console.log("Popped");
     }
     
-    this.rows.push({ Workout: this.workout, setCounter: 0, repCounter : 0});
+    this.rows.push({ name: this.workout, setCounter: 0, repCounter : 0});
+    this.copyRows.push({ name: this.workout, setCounter: 0, repCounter : 0});
 
     console.log(this.rows);
     if(this.counter + 1 != this.totalCards)
