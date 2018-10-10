@@ -9,11 +9,14 @@ export class HomePage {
 
   public repetition : number;
   public sets : number;
+  public setCounter : number;
+  public repCoutner : number;
 
   public counter : number;
   public totalCards : number;
 
   public rows: Array<{ Workout: string, setCounter: number, repCounter : number}> = [];
+  public copyRows: Array<{ Workout: string, setCounter: number, repCounter : number}> = [];
   workout: String = "";
 
 
@@ -22,30 +25,36 @@ export class HomePage {
 
     
   constructor(public navCtrl: NavController) {
-    this.repetition = 5;
+
     this.sets = 0;
     this.counter = -1;
     this.totalCards = 0;
+    this.setCounter = 0;
+    this.repCounter = 0;
+    this.forCounter = 0;
+    console.log("This.counter is " + this.counter);
+    this.addrow();
+
     }
 
   incrementReps() 
   {
-    this.rows[this.counter].repCounter += 1;
+    this.rows[0].repCounter += 1;
   }
 
-  incrementSets(rCounter) 
+  incrementSets() 
   {
-    this.rows[this.counter].setCounter += 1;
+    this.rows[0].setCounter += 1;
   }
 
   decrementReps() 
   {
-    this.rows[this.counter].repCounter -= 1;
+    this.rows[0].repCounter -= 1;
   }
 
-  decrementSets(rCounter) 
+  decrementSets() 
   {
-    this.rows[this.counter].setCounter -= 1;
+    this.rows[0].setCounter -= 1;
   }
 
   editPrev() 
@@ -58,8 +67,18 @@ export class HomePage {
   }
 
   private addrow(){
-    this.rows.push({ Workout: this.workout, setCounter: 0, repCounter : 0});
 
+
+    if(this.counter != -1){
+       console.log("This.forCounter is " + this.forCounter)
+       this.copyRows[this.forCounter] = this.rows[0];
+       this.rows.pop();
+       this.forCounter++;
+       console.log("Popped");
+    }
+    
+    this.rows.push({ Workout: this.workout, setCounter: 0, repCounter : 0});
+    console.log(this.rows);
     if(this.counter + 1 != this.totalCards)
     {
       this.counter = this.totalCards;
@@ -69,18 +88,16 @@ export class HomePage {
       this.counter += 1;
       this.totalCards += 1;
     }
+
+    console.log("This.counter is " + this.counter);
+
+
     
   }
 
   private printArray() {
+    console.log(this.copyRows);
 
-    console.log("This counter is: " + this.counter);
-    for(var i = -1; i < this.counter; i++)
-    {
-      console.log(this.rows[i+1]);
-    }
-    console.log("printArray button has been pressed!");
-    console.log(this.workout);
 
 
   }
