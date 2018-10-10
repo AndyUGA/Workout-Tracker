@@ -10,14 +10,15 @@ export class HomePage {
   public repetition : number;
   public sets : number;
   public setCounter : number;
-  public repCoutner : number;
+  public repCounter : number;
+  public forCounter : number;
 
   public counter : number;
   public totalCards : number;
 
   public rows: Array<{ Workout: string, setCounter: number, repCounter : number}> = [];
   public copyRows: Array<{ Workout: string, setCounter: number, repCounter : number}> = [];
-  workout: String = "";
+  workout: string = "";
 
 
 
@@ -70,7 +71,8 @@ export class HomePage {
 
 
     if(this.counter != -1){
-       console.log("This.forCounter is " + this.forCounter)
+       console.log("Copying " + this.workout + " to this.copyRows")
+       this.copyRows[this.forCounter - 1].Workout = this.workout;
        this.copyRows[this.forCounter] = this.rows[0];
        this.rows.pop();
        this.forCounter++;
@@ -78,6 +80,7 @@ export class HomePage {
     }
     
     this.rows.push({ Workout: this.workout, setCounter: 0, repCounter : 0});
+
     console.log(this.rows);
     if(this.counter + 1 != this.totalCards)
     {

@@ -19,8 +19,8 @@
 
 
 
-             Sets: {{ row?.secondCol }}  {{ row?.setCounter }}
-            Reps: {{ row?.thirdCol }}   {{ row?.repCounter }}
+             Sets:  {{ row?.setCounter }}
+            Reps:  {{ row?.repCounter }}
           </ion-card-content>
         </ion-card>
       </ion-row>
@@ -55,4 +55,7 @@
      <button ion-button small (click)="printArray()">Print</button>
   </ion-row>
 </ion-grid>
+
+{{copyRows?.Workout}}
+{{copyRows?.setCounter}} {{copyRows?.rowCounter}}
 </ion-content>
