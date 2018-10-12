@@ -77,13 +77,13 @@ export class HomePage {
        this.copyRows[0].name = this.workout;
        this.rows.pop();
        this.forCounter++;
-       console.log("Popped");
+
     }
     
     this.rows.push({ name: this.workout, setCounter: 0, repCounter : 0});
     this.copyRows.push({ name: this.workout, setCounter: 0, repCounter : 0});
 
-    console.log(this.rows);
+
     if(this.counter + 1 != this.totalCards)
     {
       this.counter = this.totalCards;
@@ -94,7 +94,7 @@ export class HomePage {
       this.totalCards += 1;
     }
 
-    console.log("This.counter is " + this.counter);
+
 
 
     
