@@ -33,61 +33,44 @@ export class HomePage {
 
     this.setCounter = 0;
     this.repCounter = 0;
-    this.forCounter = 0;
-    this.addrow();
+    this.rsCounter = 0;
+
 
 
     }
 
   incrementReps() 
   {
-    this.rows[1].repCounter += 1;
+    this.rows[rsCounter].repCounter += 1;
   }
 
   incrementSets() 
   {
-    this.rows[1].setCounter += 1;
+    this.rows[rsCounter].setCounter += 1;
   }
 
   decrementReps() 
   {
-    this.rows[1].repCounter -= 1;
+    this.rows[rsCounter].repCounter -= 1;
   }
 
   decrementSets() 
   {
-    this.rows[1].setCounter -= 1;
+    this.rows[rsCounter].setCounter -= 1;
   }
 
-  editPrev() 
-  {
-    if((this.counter - 1) != -1)
-    {
-      this.counter -= 1;
-    }
-    
-  }
+  
 
   private addrow(){
 
-    console.log("addrow is called");
+    console.log("addrow is called")
 
     this.rows.push({ name: this.workout, setCounter: 0, repCounter : 0});
     
 
-    if(this.counter != -1){
-      this.copyRows.push({ name: this.workout, setCounter: 0, repCounter : 0});
-       console.log("Copying " + this.workout + " to this.copyRows")
-       console.log('this.forCounter is ' + this.forCounter);
-       this.copyRows[this.forCounter] = this.rows[1];
-       this.rows.pop();
-       this.forCounter++;
 
-    }
-    
 
     
-    this.counter += 1;
 
 
 
@@ -98,7 +81,7 @@ export class HomePage {
   }
 
   private printArray() {
-    console.log(this.copyRows);
+    console.log(this.rows);
 
 
 
