@@ -13,7 +13,7 @@ export class HomePage {
   public setCounter : number;
   public repCounter : number;
 
-  public forCounter : number;
+  public rsCounter : number;
   public counter : number;
 
 
@@ -35,28 +35,35 @@ export class HomePage {
     this.repCounter = 0;
     this.rsCounter = 0;
 
-
+    for(var i = 0; i < 7; i++)
+    {
+      this.addrow();
+    }
 
     }
 
   incrementReps() 
   {
-    this.rows[rsCounter].repCounter += 1;
+    //this.repCounter += 1;
+    this.rows[this.rsCounter].repCounter += 1;
   }
 
   incrementSets() 
   {
-    this.rows[rsCounter].setCounter += 1;
+    //this.setCounter += 1;
+    this.rows[this.rsCounter].setCounter += 1;
   }
 
   decrementReps() 
   {
-    this.rows[rsCounter].repCounter -= 1;
+    //this.repcounter -= 1;
+    this.rows[this.rsCounter].repCounter -= 1;
   }
 
   decrementSets() 
   {
-    this.rows[rsCounter].setCounter -= 1;
+    //this.setCounter -= 1;
+    this.rows[this.rsCounter].setCounter -= 1;
   }
 
   
@@ -65,15 +72,8 @@ export class HomePage {
 
     console.log("addrow is called")
 
-    this.rows.push({ name: this.workout, setCounter: 0, repCounter : 0});
-    
-
-
-
-    
-
-
-
+    this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
+  
 
 
 
