@@ -9,6 +9,7 @@ export class HomePage {
 
   public repetition : number;
   public sets : number;
+  public weight: number;
 
   public setCounter : number;
   public repCounter : number;
@@ -72,8 +73,8 @@ export class HomePage {
 
     if(this.counter == 0)
     {
-      this.rows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter});
-      this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter});
+      this.rows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
+      this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       this.counter++;
       this.displayWorkout = false;
       this.resetCounter();
@@ -81,12 +82,13 @@ export class HomePage {
     }
 
     else {
-      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
+      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       console.log(this.copyRows[0].name);
       this.rows.pop();
-      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
+      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       this.resetCounter();
       this.workout = "";
+      this.weight = 0;
     }
     
 
