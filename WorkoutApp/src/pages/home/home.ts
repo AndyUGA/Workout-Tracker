@@ -21,6 +21,8 @@ export class HomePage {
   public copyRows: Array<{ name: string, setCounter: number, repCounter : number}> = [];
   workout: string = "";
 
+  public  displayWorkout: boolean = true;
+
 
 
 
@@ -29,12 +31,12 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
     this.sets = 0;
-    this.counter = -1;
+    this.counter = 0;
 
     this.setCounter = 0;
     this.repCounter = 0;
     this.rsCounter = 0;
-
+    this.displayWorkout = true;
  
 
     }
@@ -53,7 +55,7 @@ export class HomePage {
 
   decrementReps() 
   {
-    this.repcounter -= 1;
+    this.repCounter -= 1;
     //this.rows[this.rsCounter].repCounter -= 1;
   }
 
@@ -67,10 +69,17 @@ export class HomePage {
 
   private addrow(){
 
-    console.log("addrow is called")
+    if(this.counter == 0)
+    {
+      this.rows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter});
+      this.counter++;
+      this.displayWorkout = false;
+    }
+
+    else {
+      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
+    }
     
-    this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
-    this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
 
 
 
