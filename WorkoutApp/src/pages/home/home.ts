@@ -72,12 +72,19 @@ export class HomePage {
     if(this.counter == 0)
     {
       this.rows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter});
+      this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter});
       this.counter++;
       this.displayWorkout = false;
+      this.resetCounter();
+
     }
 
     else {
+      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
+      this.rows.pop();
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
+      this.resetCounter();
+      this.workout = "";
     }
     
 
@@ -87,10 +94,25 @@ export class HomePage {
   }
 
   private printArray() {
-    console.log(this.rows);
-
-
+    console.log(this.copyRows);
 
   }
+
+  private resetCounter() {
+    this.setCounter = 0;
+    this.repCounter = 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
