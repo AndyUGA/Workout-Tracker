@@ -17,11 +17,12 @@ export class HomePage {
   public counter : number;
 
 
-  public rows: Array<{ name: string, setCounter: number, repCounter : number}> = [];
-  public copyRows: Array<{ name: string, setCounter: number, repCounter : number}> = [];
+  public rows: Array<{ name: string, setCounter: number, repCounter : number, weight: number}> = [];
+  public copyRows: Array<{ name: string, setCounter: number, repCounter : number, weight: number}> = [];
   workout: string = "";
+  firstWorkout: string = "";
 
-  public  displayWorkout: boolean = true;
+  public displayWorkout: boolean = true;
 
 
 
@@ -81,6 +82,7 @@ export class HomePage {
 
     else {
       this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
+      console.log(this.copyRows[0].name);
       this.rows.pop();
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter});
       this.resetCounter();
