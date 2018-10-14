@@ -10,12 +10,15 @@
 <ion-grid>
 
 
+
+
+            Sets: {{setCounter}}
+            Reps: {{repCounter}}
       <ion-item *ngIf = "displayWorkout">
     <ion-input  placeholder="Name of Workout" [(ngModel)] = "firstWorkout"></ion-input>
   </ion-item>
 
-          Sets: {{setCounter}}
-            Reps: {{repCounter}}
+          
       <ion-row *ngFor="let row of rows">
         <ion-card>
           <ion-card-content>
