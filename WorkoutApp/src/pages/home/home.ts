@@ -48,25 +48,25 @@ export class HomePage {
   incrementReps() 
   {
     this.repCounter += 1;
-    //this.rows[this.rsCounter].repCounter += 1;
+
   }
 
   incrementSets() 
   {
     this.setCounter += 1;
-    //this.rows[this.rsCounter].setCounter += 1;
+
   }
 
   decrementReps() 
   {
     this.repCounter -= 1;
-    //this.rows[this.rsCounter].repCounter -= 1;
+
   }
 
   decrementSets() 
   {
     this.setCounter -= 1;
-    //this.rows[this.rsCounter].setCounter -= 1;
+
   }
 
   
