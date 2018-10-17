@@ -9,7 +9,7 @@ export class HomePage {
 
   public repetition : number;
   public sets : number;
-  public weight: number;
+  public Weight: number;
 
   public setCounter : number;
   public repCounter : number;
@@ -84,13 +84,13 @@ export class HomePage {
     }
 
     else {
-      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.weight});
+      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
 
       this.rows.pop();
-      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.weight});
+      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       this.resetCounter();
       this.workout = "";
-      this.weight = 0;
+      this.Weight = 0;
     }
     
 
