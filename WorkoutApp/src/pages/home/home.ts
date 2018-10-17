@@ -73,8 +73,8 @@ export class HomePage {
 
     if(this.counter == 0)
     {
-      this.rows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
+      this.rows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.weight});
+      this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.weight});
       this.counter++;
       this.displayWorkout = false;
       this.resetCounter();
@@ -82,10 +82,10 @@ export class HomePage {
     }
 
     else {
-      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      console.log(this.copyRows[0].name);
+      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.weight});
+
       this.rows.pop();
-      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
+      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.weight});
       this.resetCounter();
       this.workout = "";
       this.weight = 0;
