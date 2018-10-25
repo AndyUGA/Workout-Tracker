@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Workout Tracker</ion-title>
+    <ion-title>Tracker</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -9,11 +9,10 @@
 
 <ion-grid>
 
-
-
-
+  
             Sets: {{setCounter}}
             Reps: {{repCounter}}
+
       <ion-item *ngIf = "displayWorkout">
     <ion-input  placeholder="Name of Workout" [(ngModel)] = "firstWorkout"></ion-input>
     <br>
@@ -24,10 +23,8 @@
       <ion-row *ngFor="let row of rows">
         <ion-card>
           <ion-card-content>
-            <div class = "item">
-            <ion-input  class = "label" [(ngModel)] = "workout"placeholder="Name of Workout"></ion-input>           
-            </div>
 
+            <ion-input  class = "label" [(ngModel)] = "workout"placeholder="Name of Workout"></ion-input>         
             <ion-input type = "tel"placeholder="Weight" [(ngModel)] = "Weight"></ion-input>
 
 
