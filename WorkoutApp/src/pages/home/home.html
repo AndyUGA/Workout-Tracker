@@ -8,23 +8,26 @@
     <br><br>
 
 <ion-grid>
-
   
-            Sets: {{setCounter}}
+            
+    <div *ngIf = "displayWorkout">
+    Sets: {{setCounter}}
             Reps: {{repCounter}}
-
+          </div>
       <ion-item *ngIf = "displayWorkout">
+
     <ion-input  placeholder="Name of Workout" [(ngModel)] = "firstWorkout"></ion-input>
     <br>
-    <ion-input  placeholder="Weight" [(ngModel)] = "firstWeight"></ion-input>
+    <ion-input type = "tel" placeholder="Weight" [(ngModel)] = "firstWeight"></ion-input>
   </ion-item>
 
       <ion-list>
       <ion-row *ngFor="let row of rows">
         <ion-card>
           <ion-card-content>
-
-            <ion-input  [(ngModel)] = "workout"placeholder="Name of Workout"></ion-input>         
+            Sets: {{setCounter}}
+            Reps: {{repCounter}}
+            <ion-input [(ngModel)] = "workout"placeholder="Name of Workout"></ion-input>         
             <ion-input type = "tel" placeholder="Weight" [(ngModel)] = "Weight"></ion-input>
 
 
