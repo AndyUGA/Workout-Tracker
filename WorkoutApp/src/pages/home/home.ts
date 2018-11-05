@@ -14,6 +14,9 @@ export class HomePage {
   public setCounter : number;
   public repCounter : number;
 
+  public copySetCounter: number;
+  public copyRepCounter: number;
+
   public rsCounter : number;
   public counter : number;
 
@@ -80,7 +83,7 @@ export class HomePage {
       this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.firstWeight});
       this.counter++;
       this.displayWorkout = false;
-      this.resetCounter();
+      this.resetVar();
 
     }
 
@@ -89,9 +92,10 @@ export class HomePage {
 
       this.rows.pop();
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      this.resetCounter();
-      this.copyWorkout = this.workout;
-      this.workout = "";
+      
+      this.saveVariables();
+      this.resetVar();
+      
       this.Weight = 0;
     }
     
@@ -106,18 +110,24 @@ export class HomePage {
 
   }
 
-  private resetCounter() {
+  private resetVar() {
     this.setCounter = 0;
     this.repCounter = 0;
+    this.workout = "";
   }
 
   private loadPreviousWorkout() {
     this.workout = this.copyWorkout;
+    this.setCounter = this.copySetCounter;
+    this.repCounter = this.copyRepCounter;
   }
 
 
-
-
+  private saveVariables() {
+    this.copyWorkout = this.workout;
+    this.copySetCounter = this.setCounter;
+    this.copyRepCounter = this.repCounter;
+  }
 
 
 
