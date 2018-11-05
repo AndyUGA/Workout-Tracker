@@ -21,6 +21,7 @@ export class HomePage {
   public rows: Array<{ name: string, setCounter: number, repCounter : number, weight: number}> = [];
   public copyRows: Array<{ name: string, setCounter: number, repCounter : number, weight: number}> = [];
   workout: string = "";
+  copyWorkout : string = "";
 
   firstWorkout: string = "";
   firstWeight: number;
@@ -89,6 +90,7 @@ export class HomePage {
       this.rows.pop();
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       this.resetCounter();
+      this.copyWorkout = this.workout;
       this.workout = "";
       this.Weight = 0;
     }
@@ -109,7 +111,10 @@ export class HomePage {
     this.repCounter = 0;
   }
 
-
+  private loadPreviousWorkout() {
+    
+    this.workout = this.copyWorkout;
+  }
 
 
 

@@ -8,14 +8,11 @@
     <br><br>
 
 <ion-grid>
-  
-            
-    <div *ngIf = "displayWorkout">
+  <div *ngIf = "displayWorkout">
     Sets: {{setCounter}}
-            Reps: {{repCounter}}
-          </div>
-      <ion-item *ngIf = "displayWorkout">
-
+    Reps: {{repCounter}}
+  </div>
+  <ion-item *ngIf = "displayWorkout">
     <ion-input  placeholder="Name of Workout" [(ngModel)] = "firstWorkout"></ion-input>
     <br>
     <ion-input type = "tel" placeholder="Weight" [(ngModel)] = "firstWeight"></ion-input>
@@ -27,14 +24,11 @@
           <ion-card-content>
             Sets: {{setCounter}}
             Reps: {{repCounter}}
-            <ion-input [(ngModel)] = "workout"placeholder="Name of Workout"></ion-input>         
+            <ion-input [(ngModel)] = "workout" placeholder="Name of Workout"></ion-input>         
             <ion-input type = "tel" placeholder="Weight" [(ngModel)] = "Weight"></ion-input>
 
 
-            
-            <!--Sets:  {{ row?.setCounter }}
-            Reps:  {{ row?.repCounter }}
-          -->
+         
           </ion-card-content>
         </ion-card>
       </ion-row>
@@ -68,6 +62,7 @@
     
     <button ion-button small (click)="addrow()">Add a workout</button>
      <button ion-button small (click)="printArray()">Print</button>
+     <button ion-button small (click)="loadPreviousWorkout()">Load Previous</button>
   </ion-row>
 </ion-grid>
 
