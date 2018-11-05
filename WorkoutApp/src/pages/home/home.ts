@@ -112,7 +112,6 @@ export class HomePage {
   }
 
   private loadPreviousWorkout() {
-    
     this.workout = this.copyWorkout;
   }
 
