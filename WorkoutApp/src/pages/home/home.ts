@@ -16,6 +16,7 @@ export class HomePage {
 
   public copySetCounter: number;
   public copyRepCounter: number;
+  public copyWeight: number;
 
   public rsCounter : number;
   public counter : number;
@@ -86,7 +87,7 @@ export class HomePage {
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       this.saveVariables();
       this.resetVariables();
-      this.Weight = 0;
+      
     }
   
   }
@@ -101,6 +102,7 @@ export class HomePage {
     this.setCounter = 0;
     this.repCounter = 0;
     this.workout = "";
+    this.Weight = 0;
   }
 
   private loadPreviousWorkout() 
@@ -108,11 +110,13 @@ export class HomePage {
     this.workout = this.copyWorkout;
     this.setCounter = this.copySetCounter;
     this.repCounter = this.copyRepCounter;
+    this.Weight = this.copyWeight;
   }
 
 
   private saveVariables() 
   {
+    this.copyWeight = this.Weight;
     this.copyWorkout = this.workout;
     this.copySetCounter = this.setCounter;
     this.copyRepCounter = this.repCounter;
