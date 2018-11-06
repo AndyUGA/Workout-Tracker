@@ -32,15 +32,10 @@ export class HomePage {
   public displayWorkout: boolean = true;
 
 
-
-
-
-    
   constructor(public navCtrl: NavController) {
 
     this.sets = 0;
     this.counter = 0;
-
     this.setCounter = 0;
     this.repCounter = 0;
     this.rsCounter = 0;
@@ -52,25 +47,21 @@ export class HomePage {
   incrementReps() 
   {
     this.repCounter += 1;
-
   }
 
   incrementSets() 
   {
     this.setCounter += 1;
-
   }
 
   decrementReps() 
   {
     this.repCounter -= 1;
-
   }
 
   decrementSets() 
   {
     this.setCounter -= 1;
-
   }
 
   
@@ -83,47 +74,43 @@ export class HomePage {
       this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.firstWeight});
       this.counter++;
       this.displayWorkout = false;
-      this.resetVar();
-
+      this.resetVariables();
     }
 
-    else {
+    else 
+    {
       this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-
       this.rows.pop();
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      
       this.saveVariables();
-      this.resetVar();
-      
+      this.resetVariables();
       this.Weight = 0;
     }
-    
-
-
-
-    
+  
   }
 
-  private printArray() {
+  private printArray() 
+  {
     console.log(this.copyRows);
-
   }
 
-  private resetVar() {
+  private resetVariables() 
+  {
     this.setCounter = 0;
     this.repCounter = 0;
     this.workout = "";
   }
 
-  private loadPreviousWorkout() {
+  private loadPreviousWorkout() 
+  {
     this.workout = this.copyWorkout;
     this.setCounter = this.copySetCounter;
     this.repCounter = this.copyRepCounter;
   }
 
 
-  private saveVariables() {
+  private saveVariables() 
+  {
     this.copyWorkout = this.workout;
     this.copySetCounter = this.setCounter;
     this.copyRepCounter = this.repCounter;

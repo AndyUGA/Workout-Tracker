@@ -8,14 +8,11 @@
     <br><br>
 
 <ion-grid>
-  <div *ngIf = "displayWorkout">
-    Sets: {{setCounter}}
-    Reps: {{repCounter}}
-  </div>
+
   <ion-item *ngIf = "displayWorkout">
-    <ion-input  placeholder="Name of Workout" [(ngModel)] = "firstWorkout"></ion-input>
+    <ion-input  type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
     <br>
-    <ion-input type = "tel" placeholder="Weight" [(ngModel)] = "firstWeight"></ion-input>
+   
   </ion-item>
 
       <ion-list>
