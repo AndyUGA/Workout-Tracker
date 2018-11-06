@@ -60,8 +60,13 @@
     <button ion-button small (click)="addrow()">Add a workout</button>
 
      <button ion-button small (click)="loadPreviousWorkout()">Load Previous</button>
+
+     <button ion-button small (click)="getTime()"> Print Time </button>
   </ion-row>
 </ion-grid>
+    {{firstWorkout}}
+    <br>
+    {{myDate}}
 
       <ion-row *ngFor="let row of copyRows">
         

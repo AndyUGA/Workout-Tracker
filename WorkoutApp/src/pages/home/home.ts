@@ -31,11 +31,13 @@ export class HomePage {
 
   public displayWorkout: boolean = true;
 
+  public myDate: String = new Date().toLocaleString();
+
 
   constructor(public navCtrl: NavController) {
 
     this.sets = 0;
-    this.counter = 0;
+    this.counter = 1;
     this.setCounter = 0;
     this.repCounter = 0;
     this.rsCounter = 0;
@@ -114,6 +116,10 @@ export class HomePage {
     this.copyWorkout = this.workout;
     this.copySetCounter = this.setCounter;
     this.copyRepCounter = this.repCounter;
+  }
+
+  private getTime() {
+    console.log(this.myDate);
   }
 
 
