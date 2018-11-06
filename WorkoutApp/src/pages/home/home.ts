@@ -37,7 +37,7 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
     this.sets = 0;
-    this.counter = 1;
+    this.counter = 0;
     this.setCounter = 0;
     this.repCounter = 0;
     this.rsCounter = 0;
