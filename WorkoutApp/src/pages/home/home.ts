@@ -31,6 +31,7 @@ export class HomePage {
   firstWeight: number;
 
   public displayWorkout: boolean = true;
+  public displayButtons: boolean = false;
 
   public myDate: String = new Date().toLocaleString();
 
@@ -77,6 +78,7 @@ export class HomePage {
       this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.firstWeight});
       this.counter++;
       this.displayWorkout = false;
+      this.displayButtons = true;
       this.resetVariables();
     }
 

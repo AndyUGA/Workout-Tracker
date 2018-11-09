@@ -11,10 +11,13 @@
 
   <ion-item *ngIf = "displayWorkout">
     <ion-input  type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
+
     <br>
    
   </ion-item>
-
+  <div *ngIf = "displayWorkout">
+    <button ion-button small (click)="addrow()">Add a workout</button>
+  </div>
       <ion-list>
       <ion-row *ngFor="let row of rows">
         <ion-card>
@@ -34,6 +37,7 @@
 
 
   <ion-grid>
+    <div *ngIf = "displayButtons">
     <ion-row>
     <ion-col>
     Sets
@@ -51,22 +55,25 @@
       </button> 
       <button ion-button outline icon-only small (click) = "decrementReps()">
         <ion-icon name="remove"></ion-icon>
+
       </button> 
     </ion-col>
   </ion-row>
   <ion-row>
     
     
-    <button ion-button small (click)="addrow()">Add a workout</button>
-
+      <button ion-button small (click)="addrow()">Add a workout</button>
      <button ion-button small (click)="loadPreviousWorkout()">Load Previous</button>
 
    
   </ion-row>
+</div>
 </ion-grid>
-    {{firstWorkout}}
+
     <br>
+    <div *ngIf = "displayButtons">
     {{myDate}}
+  </div>
 
       <ion-row *ngFor="let row of copyRows">
         
