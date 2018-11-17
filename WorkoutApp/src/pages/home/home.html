@@ -9,15 +9,15 @@
 
 <ion-grid>
 
-  <ion-item *ngIf = "displayWorkout">
-    <ion-input  type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
-
-    <br>
-   
-  </ion-item>
-  <div *ngIf = "displayWorkout">
+   <ion-card text-center *ngIf = "displayWorkout">
+    <div class="or-label">
+       <ion-input  text-center type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
+    </div>
+    <div *ngIf = "displayWorkout">
     <button ion-button small (click)="addrow()">Add a workout</button>
   </div>
+</ion-card>
+ 
       <ion-list>
       <ion-row *ngFor="let row of rows">
         <ion-card>
@@ -74,10 +74,10 @@
     <div *ngIf = "displayButtons">
     {{myDate}}
   </div>
-
+      {{firstWorkout}}
       <ion-row *ngFor="let row of copyRows">
         
-      
+            
             {{ row?.name }}: {{row?.setCounter}} sets of {{row?.repCounter}} ({{row?.weight}})
 
 

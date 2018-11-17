@@ -74,12 +74,12 @@ export class HomePage {
 
     if(this.counter == 0)
     {
-      this.rows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.firstWeight});
-      this.copyRows.push({ name: this.firstWorkout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.firstWeight});
+
       this.counter++;
       this.displayWorkout = false;
       this.displayButtons = true;
       this.resetVariables();
+
     }
 
     else 
