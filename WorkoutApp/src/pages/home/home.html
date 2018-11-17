@@ -9,23 +9,30 @@
 
 <ion-grid>
 
-   <ion-card text-center *ngIf = "displayWorkout">
+   <div text-center *ngIf = "displayWorkout">
     <div class="or-label">
        <ion-input  text-center type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
     </div>
     <div *ngIf = "displayWorkout">
     <button ion-button small (click)="addrow()">Add a workout</button>
   </div>
-</ion-card>
+</div>
+
  
       <ion-list>
       <ion-row *ngFor="let row of rows">
         <ion-card>
           <ion-card-content>
+            <div text-nowrap>
             Sets: {{setCounter}}
+             <div float-right>
             Reps: {{repCounter}}
-            <ion-input [(ngModel)] = "workout" placeholder="Name of Workout"></ion-input>         
-            <ion-input type = "tel" placeholder="Weight" [(ngModel)] = "Weight"></ion-input>
+          </div>
+          </div>
+         
+
+            <ion-input text-center [(ngModel)] = "workout" placeholder="Name of Workout"></ion-input>         
+            <ion-input text-center type = "tel" placeholder="Weight" [(ngModel)] = "Weight"></ion-input>
 
 
          
