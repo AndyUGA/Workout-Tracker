@@ -79,6 +79,7 @@ export class HomePage {
       this.displayWorkout = false;
       this.displayButtons = true;
       this.resetVariables();
+      this.addrow();
 
     }
 
@@ -126,6 +127,11 @@ export class HomePage {
 
   private getTime() {
     console.log(this.myDate);
+  }
+
+  private loadDefault() {
+    this.setCounter = 1;
+    this.repCounter = 8;
   }
 
 
