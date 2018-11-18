@@ -14,7 +14,7 @@
        <ion-input  text-center type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
     </div>
     <div *ngIf = "displayWorkout">
-    <button ion-button small (click)="addrow()">Add a workout</button>
+    <button ion-button full round small (click)="addrow()">Add a workout</button>
   </div>
 </div>
 
@@ -69,9 +69,11 @@
   <ion-row>
     
     
-      <button ion-button small (click)="addrow()">Add a workout</button>
-     <button ion-button small (click)="loadPreviousWorkout()">Load Previous</button>
-     <button ion-button small (click) = "loadDefault()"> Load Default
+      <button ion-button round small (click)="addrow()">Add a workout</button>
+
+     <button ion-button round small (click)="loadPreviousWorkout()">Load Previous</button>
+
+     <button ion-button round small (click) = "loadDefault()"> Load Default
      </button>
 
    
