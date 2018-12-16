@@ -99,7 +99,7 @@ export class HomePage {
   
   }
 
-  
+  //Resets set, rep, workout, and weight variable
   private resetVariables() 
   {
     this.setCounter = 0;
@@ -108,6 +108,7 @@ export class HomePage {
     this.Weight = 0;
   }
 
+  //Loads previous workout that user added
   private loadPreviousWorkout() 
   {
     this.workout = this.copyWorkout;
@@ -116,7 +117,7 @@ export class HomePage {
     this.Weight = this.copyWeight;
   }
 
-
+  //Saves variables into temp varible
   private saveVariables() 
   {
     this.copyWeight = this.Weight;
@@ -126,7 +127,7 @@ export class HomePage {
   }
 
   
-
+  //Loads default value of 1 set and 8 reps
   private loadDefault() {
     this.setCounter = 1;
     this.repCounter = 8;
