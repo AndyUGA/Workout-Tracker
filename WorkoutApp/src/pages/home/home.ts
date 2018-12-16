@@ -99,11 +99,7 @@ export class HomePage {
   
   }
 
-  private printArray() 
-  {
-    console.log(this.copyRows);
-  }
-
+  
   private resetVariables() 
   {
     this.setCounter = 0;
@@ -129,9 +125,7 @@ export class HomePage {
     this.copyRepCounter = this.repCounter;
   }
 
-  private getTime() {
-    console.log(this.myDate);
-  }
+  
 
   private loadDefault() {
     this.setCounter = 1;
