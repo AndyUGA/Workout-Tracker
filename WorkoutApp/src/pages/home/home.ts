@@ -48,21 +48,25 @@ export class HomePage {
 
     }
 
+  //Increments rep counter variable by 1
   incrementReps() 
   {
     this.repCounter += 1;
   }
 
+  //Increments set counter variable by 1
   incrementSets() 
   {
     this.setCounter += 1;
   }
 
+  //Decrement rep counter variable by 1
   decrementReps() 
   {
     this.repCounter -= 1;
   }
 
+  //Decrement set counter variable by 1
   decrementSets() 
   {
     this.setCounter -= 1;
