@@ -94,8 +94,14 @@ export class HomePage {
       
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      this.resetVariables();
+      if(this.counter == 1)
+      {
+          this.copyRows.pop();
+      }
+      this.counter++;
       this.saveVariables();
+      this.resetVariables();
+      
       
     }
   

@@ -82,9 +82,10 @@
     <br>
     <div *ngIf = "displayButtons">
     {{myDate}}
-  </div>
-      {{firstWorkout}}
-      <ion-row *ngFor="let row of rows">
+      <br>
+      Locker Number : {{firstWorkout}}
+      </div>
+      <ion-row *ngFor="let row of copyRows">
         
             
             {{ row?.name }}: {{row?.setCounter}} sets of {{row?.repCounter}} ({{row?.weight}})
