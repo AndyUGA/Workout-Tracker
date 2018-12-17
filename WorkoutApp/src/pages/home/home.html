@@ -1,6 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Tracker</ion-title>
+
   </ion-navbar>
 </ion-header>
 
@@ -9,19 +10,18 @@
 
 <ion-grid>
 
-   <div text-center *ngIf = "displayWorkout">
-    <div class="or-label">
+    <div class="or-label" *ngIf = "lockerNumber">
+      <div class="or-label">
        <ion-input  text-center type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
     </div>
-    <div *ngIf = "displayWorkout">
-    <button ion-button full round small (click)="addrow()">Add a workout</button>
-  </div>
+     <button ion-button full round small (click)="addrow()">Begin Workout</button>
+    </div>
+   <div text-center *ngIf = "displayWorkout">
+    
+  
 </div>
 
- 
-      <ion-list>
-      <ion-row *ngFor="let row of rows">
-        <ion-card>
+      <ion-card *ngIf = "displayButtons">
           <ion-card-content>
             <div text-nowrap>
             Sets: {{setCounter}}
@@ -33,13 +33,10 @@
 
             <ion-input text-center [(ngModel)] = "workout" placeholder="Name of Workout"></ion-input>         
             <ion-input text-center type = "tel" placeholder="Weight" [(ngModel)] = "Weight"></ion-input>
-
-
-         
           </ion-card-content>
         </ion-card>
-      </ion-row>
-    </ion-list>
+
+      
     </ion-grid>
 
 
@@ -87,7 +84,7 @@
     {{myDate}}
   </div>
       {{firstWorkout}}
-      <ion-row *ngFor="let row of copyRows">
+      <ion-row *ngFor="let row of rows">
         
             
             {{ row?.name }}: {{row?.setCounter}} sets of {{row?.repCounter}} ({{row?.weight}})

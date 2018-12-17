@@ -32,6 +32,7 @@ export class HomePage {
 
   public displayWorkout: boolean = true;
   public displayButtons: boolean = false;
+  public lockerNumber : boolean;
 
   public myDate: String = new Date().toLocaleString();
 
@@ -43,7 +44,8 @@ export class HomePage {
     this.setCounter = 0;
     this.repCounter = 0;
     this.rsCounter = 0;
-    this.displayWorkout = true;
+    this.displayWorkout = false;
+    this.lockerNumber = true;
  
 
     }
@@ -80,7 +82,7 @@ export class HomePage {
     {
 
       this.counter++;
-      this.displayWorkout = false;
+      this.lockerNumber = false;
       this.displayButtons = true;
       this.resetVariables();
       this.addrow();
@@ -89,11 +91,11 @@ export class HomePage {
 
     else 
     {
-      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      this.rows.pop();
+      
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      this.saveVariables();
+      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       this.resetVariables();
+      this.saveVariables();
       
     }
   
