@@ -83,21 +83,32 @@
   </ion-row>
 </div>
 </ion-grid>
-
-    <br>
-    <div *ngIf = "displayButtons" text-center>
-     {{myDate}} 
+  {{myDate}} 
       <br>
       Locker Number : {{firstWorkout}}
+    <br>
+    <div *ngIf = "displayButtons" text-center>
+
+      <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Sets and Reps</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of copyRows">
+        <td>{{ row?.name }}</td>
+        <td>{{row?.setCounter}} sets of {{row?.repCounter}} </td>
+        <td>({{row?.weight}})</td>
+      </tr>
+    </tbody>
+  </table>
+     
       </div>
-      <ion-row *ngFor="let row of copyRows">
-        
-            
-            {{ row?.name }}: {{row?.setCounter}} sets of {{row?.repCounter}} ({{row?.weight}})
+  
 
 
-       </ion-row>
-
-
-
+ 
 </ion-content>
