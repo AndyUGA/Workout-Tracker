@@ -83,12 +83,12 @@
   </ion-row>
 </div>
 </ion-grid>
-  {{myDate}} 
-      <br>
-      Locker Number : {{firstWorkout}}
+  
     <br>
     <div *ngIf = "displayButtons" text-center>
-
+      {{myDate}} 
+      <br>
+      Locker Number : {{firstWorkout}}
       <table class="table table-hover">
     <thead>
       <tr>
@@ -101,7 +101,7 @@
       <tr *ngFor="let row of copyRows">
         <td>{{ row?.name }}</td>
         <td>{{row?.setCounter}} sets of {{row?.repCounter}} </td>
-        <td>({{row?.weight}})</td>
+        <td>{{row?.weight}}</td>
       </tr>
     </tbody>
   </table>
