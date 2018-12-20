@@ -71,12 +71,14 @@
   
     
       <div text-center> 
-      <button  ion-button round small (click)="addrow()">Add a workout</button>
-     
+      <button  ion-button round icon-end (click)="addrow()">Add Workout <ion-icon name="add"></ion-icon></button>
+
       <br>
-     <button ion-button round small (click)="loadPreviousWorkout()">Load Previous</button>
+     <button ion-button round icon-end (click)="loadPreviousWorkout()">Load Previous <ion-icon name="refresh"></ion-icon> </button>
+
+      
      <br>
-     <button ion-button round small (click) = "loadDefault()"> Load Default
+     <button ion-button round icon-end (click) = "loadDefault()"> Load Default <ion-icon name="code-download"></ion-icon>
      </button>
       </div>
    
