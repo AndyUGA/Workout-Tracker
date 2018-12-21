@@ -15,10 +15,8 @@
 
 <ion-grid>
 
-    <div class="or-label" *ngIf = "lockerNumber">
-      <div class="or-label">
+    <div  class = "workoutButton" *ngIf = "lockerNumber">
        <ion-input  text-center type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
-    </div>
      <button ion-button full round small (click)="addrow()">Begin Workout</button>
     </div>
    <div text-center *ngIf = "displayWorkout">
