@@ -12,107 +12,81 @@
 
 <ion-content padding>
     
-
 <ion-grid>
-
-    <div  class = "workoutButton" *ngIf = "lockerNumber">
-       <ion-input  text-center type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
+  <div class = "workoutButton" *ngIf = "lockerNumber">
+    <ion-input  text-center type = "tel" placeholder="Locker Number" [(ngModel)] = "firstWorkout"></ion-input>
      <button ion-button full round small (click)="addrow()">Begin Workout</button>
     </div>
-   <div text-center *ngIf = "displayWorkout">
-    
-  
-</div>
+    <div text-center *ngIf = "displayWorkout">
+    </div>
 
-      <ion-card *ngIf = "displayButtons">
-          <ion-card-content>
-            <div float-left>
-            Sets: {{setCounter}}
-          </div>
-             <div float-right>
-            Reps: {{repCounter}}
-          </div>
-
-         
-
-            <ion-input text-center [(ngModel)] = "workout" placeholder="Name of Workout"></ion-input>         
-            <ion-input text-center type = "tel" placeholder="Weight" [(ngModel)] = "Weight"></ion-input>
-          </ion-card-content>
-        </ion-card>
-
-      
-    </ion-grid>
-
+    <ion-card *ngIf = "displayButtons">
+      <ion-card-content>
+        <div float-left>
+          Sets: {{setCounter}}
+        </div>
+        <div float-right>
+          Reps: {{repCounter}}
+        </div>
+        <ion-input text-center [(ngModel)] = "workout" placeholder="Name of Workout"></ion-input>         
+        <ion-input text-center type = "tel" placeholder="Weight" [(ngModel)] = "Weight"></ion-input>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
 
   <ion-grid>
     {{myDate}} 
-      <br>
-      Locker Number : {{firstWorkout}}
-      <br><br>
-    <div *ngIf = "displayButtons">
-    <ion-row>
-    <ion-col>
-    Sets
-    <button ion-button outline icon-only  (click) = "incrementSets()">
-        <ion-icon name="add"></ion-icon>
-      </button> 
-      <button ion-button outline icon-only  (click) = "decrementSets()">
-        <ion-icon name="remove"></ion-icon>
-      </button> 
-    </ion-col>
-    <ion-col>
-    Reps
-     <button ion-button outline icon-only   (click) = "incrementReps()">
-        <ion-icon name="add"></ion-icon>
-      </button> 
-      <button ion-button outline icon-only  (click) = "decrementReps()">
-        <ion-icon name="remove"></ion-icon>
-
-      </button> 
-    </ion-col>
-  </ion-row>
-  
-    
-      <div text-center> 
-      <button  ion-button round icon-end (click)="addrow()">Add Workout <ion-icon name="add"></ion-icon></button>
-
-      <br>
-     <button ion-button round icon-end (click)="loadPreviousWorkout()">Load Previous <ion-icon name="refresh"></ion-icon> </button>
-
-      
-     <br>
-     <button ion-button round icon-end (click) = "loadDefault()"> Load Default <ion-icon name="code-download"></ion-icon>
-     </button>
-      </div>
-   
-  
-</div>
-</ion-grid>
-  
     <br>
-    <div *ngIf = "displayButtons" text-center>
-      
-
-      <table class="table table-hover">
-    <thead class = "thead-light">
-      <tr>
-        <th>Name</th>
-        <th>Sets and Reps</th>
-        <th>Weight</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let row of copyRows">
-        <td>{{ row?.name }}</td>
-        <td>{{row?.setCounter}} sets of {{row?.repCounter}} </td>
-        <td>{{row?.weight}}</td>
-      </tr>
-    </tbody>
-  </table>
-     
+    Locker Number : {{firstWorkout}}
+    <br><br>
+    <div *ngIf = "displayButtons">
+      <ion-row>
+        <ion-col>
+          Sets
+          <button ion-button outline icon-only  (click) = "incrementSets()">
+            <ion-icon name="add"></ion-icon>
+          </button> 
+          <button ion-button outline icon-only  (click) = "decrementSets()">
+            <ion-icon name="remove"></ion-icon>
+          </button> 
+        </ion-col>
+        <ion-col>
+          Reps
+          <button ion-button outline icon-only   (click) = "incrementReps()">
+            <ion-icon name="add"></ion-icon>
+          </button> 
+          <button ion-button outline icon-only  (click) = "decrementReps()">
+            <ion-icon name="remove"></ion-icon>
+          </button> 
+        </ion-col>
+      </ion-row>
+      <div text-center> 
+        <button  ion-button round icon-end (click)="addrow()">Add Workout <ion-icon name="add"></ion-icon></button>
+        <br>
+        <button ion-button round icon-end (click)="loadPreviousWorkout()">Load Previous <ion-icon name="refresh"></ion-icon> </button>
+        <br>
+        <button ion-button round icon-end (click) = "loadDefault()"> Load Default <ion-icon name="code-download"></ion-icon>
+        </button>
       </div>
-  
-
-
- 
+    </div>
+  </ion-grid>
+  <br>
+  <div *ngIf = "displayButtons" text-center>
+    <table class="table table-hover">
+      <thead class = "thead-light">
+        <tr>
+          <th>Name</th>
+          <th>Sets and Reps</th>
+          <th>Weight</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of copyRows">
+          <td>{{ row?.name }}</td>
+          <td>{{row?.setCounter}} sets of {{row?.repCounter}} </td>
+          <td>{{row?.weight}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </ion-content>
