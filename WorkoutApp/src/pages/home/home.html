@@ -26,12 +26,13 @@
 
       <ion-card *ngIf = "displayButtons">
           <ion-card-content>
-            <div text-nowrap>
+            <div float-left>
             Sets: {{setCounter}}
+          </div>
              <div float-right>
             Reps: {{repCounter}}
           </div>
-          </div>
+
          
 
             <ion-input text-center [(ngModel)] = "workout" placeholder="Name of Workout"></ion-input>         
