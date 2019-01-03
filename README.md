@@ -1,12 +1,11 @@
 # Workout-Tracker
 
-![Image](https://bendyworks.com/assets/images/blog/2017-07-25-building-dynamic-forms-in-ionic-2-2ed06317.png
-)
+
 
 
 Intro           |  Main
 :-------------------------:|:-------------------------:
-<img src="https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/previewMenu.png" width="90%" height="50%">  | <img src="https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/mainMenu.png" width="90%" height="50%">)
+<img src="https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/previewMenu.png" width="90%" height="50%">  | <img src="https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/mainMenu.png" width="90%" height="50%">
 
 # Workout Tracker 
 
