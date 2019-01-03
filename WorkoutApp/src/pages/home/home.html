@@ -45,23 +45,27 @@
 
 
   <ion-grid>
+    {{myDate}} 
+      <br>
+      Locker Number : {{firstWorkout}}
+      <br><br>
     <div *ngIf = "displayButtons">
     <ion-row>
     <ion-col>
     Sets
-    <button ion-button outline small icon-only  (click) = "incrementSets()">
+    <button ion-button outline icon-only  (click) = "incrementSets()">
         <ion-icon name="add"></ion-icon>
       </button> 
-      <button ion-button outline icon-only small (click) = "decrementSets()">
+      <button ion-button outline icon-only  (click) = "decrementSets()">
         <ion-icon name="remove"></ion-icon>
       </button> 
     </ion-col>
     <ion-col>
     Reps
-     <button ion-button outline icon-only small  (click) = "incrementReps()">
+     <button ion-button outline icon-only   (click) = "incrementReps()">
         <ion-icon name="add"></ion-icon>
       </button> 
-      <button ion-button outline icon-only small (click) = "decrementReps()">
+      <button ion-button outline icon-only  (click) = "decrementReps()">
         <ion-icon name="remove"></ion-icon>
 
       </button> 
@@ -87,10 +91,8 @@
   
     <br>
     <div *ngIf = "displayButtons" text-center>
-      {{myDate}} 
-      <br>
-      Locker Number : {{firstWorkout}}
-      <br><br>
+      
+
       <table class="table table-hover">
     <thead class = "thead-light">
       <tr>
