@@ -5,7 +5,7 @@
 
 Intro           |  Main
 :-------------------------:|:-------------------------:
-<img src="https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/previewMenu.png" width="90%" height="50%">  | <img src="https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/mainMenu.png" width="90%" height="50%">
+<img src="https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/mainMenu.png" width="90%" height="50%"> | <img src="https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/https://github.com/AndyUGA/Workout-Tracker/blob/master/WorkoutApp/img/workoutData.PNG" width="90%" height="50%">
 
 # Workout Tracker 
 
