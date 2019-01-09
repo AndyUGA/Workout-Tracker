@@ -81,9 +81,7 @@ export class HomePage {
     if(this.counter == 0)
     {
 
-      this.counter++;
-      this.lockerNumber = false;
-      this.displayButtons = true;
+      this.setupScreen();
       this.resetVariables();
       this.addrow();
 
@@ -141,6 +139,12 @@ export class HomePage {
     this.repCounter = 8;
   }
 
+  private setupScreen() 
+  {
+    this.counter++;
+    this.lockerNumber = false;
+    this.displayButtons = true;
+  }
 
 
 
