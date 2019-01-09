@@ -72,34 +72,40 @@ export class HomePage {
   incrementReps() 
   {
     //this.repCounter += 1;
-    this.numberIsValid(this.repCounter, "plus")
+    this.numberIsValid(this.repCounter, "addRep")
   }
 
   //Increments set counter variable by 1
   incrementSets() 
   {
-    this.setCounter += 1;
+    this.numberIsValid(this.setCounter, "addSet")
   }
 
   //Decrement rep counter variable by 1
   decrementReps() 
   {
 
-    this.numberIsValid(this.repCounter, "sub");
+    this.numberIsValid(this.repCounter, "subRep");
   }
 
   //Decrement set counter variable by 1
   decrementSets() 
   {
-    this.setCounter -= 1;
+    this.numberIsValid(this.setCounter, "subSet")
   }
 
   numberIsValid(num, type) {
-    if(num != 0 && type == "sub") {
+    if(num != 0 && type == "subRep") {
       this.repCounter -= 1;
     }
-    if(type == "plus") {
+    if(type == "addRep") {
       this.repCounter += 1;
+    }
+    if(num != 0 && type == "subSet") {
+      this.setCounter -= 1;
+    }
+    if(type == "addSet") {
+      this.setCounter += 1;
     }
   }
 
