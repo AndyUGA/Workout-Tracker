@@ -44,33 +44,7 @@ export class HomePage {
 
     }
 
-  //Increments rep counter variable by 1
-  incrementReps() 
-  {
-    this.repCounter += 1;
-  }
-
-  //Increments set counter variable by 1
-  incrementSets() 
-  {
-    this.setCounter += 1;
-  }
-
-  //Decrement rep counter variable by 1
-  decrementReps() 
-  {
-    this.repCounter -= 1;
-  }
-
-  //Decrement set counter variable by 1
-  decrementSets() 
-  {
-    this.setCounter -= 1;
-  }
-
-  
-
-  private addrow(){
+  addrow(){
 
     if(this.counter == 0)
     {
@@ -93,8 +67,46 @@ export class HomePage {
   
   }
 
+
+  //Increments rep counter variable by 1
+  incrementReps() 
+  {
+    //this.repCounter += 1;
+    this.numberIsValid(this.repCounter, "plus")
+  }
+
+  //Increments set counter variable by 1
+  incrementSets() 
+  {
+    this.setCounter += 1;
+  }
+
+  //Decrement rep counter variable by 1
+  decrementReps() 
+  {
+
+    this.numberIsValid(this.repCounter, "sub");
+  }
+
+  //Decrement set counter variable by 1
+  decrementSets() 
+  {
+    this.setCounter -= 1;
+  }
+
+  numberIsValid(num, type) {
+    if(num != 0 && type == "sub") {
+      this.repCounter -= 1;
+    }
+    if(type == "plus") {
+      this.repCounter += 1;
+    }
+  }
+
+
+ 
   //Resets set, rep, workout, and weight variable
-  private resetVariables() 
+  resetVariables() 
   {
     this.setCounter = 0;
     this.repCounter = 0;
@@ -103,7 +115,7 @@ export class HomePage {
   }
 
   //Loads previous workout that user added
-  private loadPreviousWorkout() 
+  loadPreviousWorkout() 
   {
     this.workout = this.copyWorkout;
     this.setCounter = this.copySetCounter;
@@ -112,7 +124,7 @@ export class HomePage {
   }
 
   //Saves variables into temp varible
-  private saveVariables() 
+  saveVariables() 
   {
     this.copyWeight = this.Weight;
     this.copyWorkout = this.workout;
@@ -122,12 +134,12 @@ export class HomePage {
 
   
   //Loads default value of 1 set and 8 reps
-  private loadDefault() {
+  loadDefault() {
     this.setCounter = 1;
     this.repCounter = 8;
   }
 
-  private setupScreen() 
+  setupScreen() 
   {
     this.counter++;
     this.lockerNumber = false;
@@ -135,7 +147,7 @@ export class HomePage {
   }
 
 
-  private pushPopRows() {
+  pushPopRows() {
       this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
       if(this.counter == 1)
@@ -145,7 +157,7 @@ export class HomePage {
       this.counter++;
   }
 
-  private intializeVariables() {
+  intializeVariables() {
     this.sets = 0;
     this.counter = 0;
     this.setCounter = 0;
