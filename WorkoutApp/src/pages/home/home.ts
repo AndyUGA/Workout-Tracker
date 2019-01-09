@@ -38,14 +38,8 @@ export class HomePage {
 
 
   constructor(public navCtrl: NavController) {
-
-    this.sets = 0;
-    this.counter = 0;
-    this.setCounter = 0;
-    this.repCounter = 0;
-    this.rsCounter = 0;
-    this.displayWorkout = false;
-    this.lockerNumber = true;
+    this.intializeVariables();
+    
  
 
     }
@@ -90,13 +84,7 @@ export class HomePage {
     else 
     {
       
-      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
-      if(this.counter == 1)
-      {
-          this.copyRows.pop();
-      }
-      this.counter++;
+      this.pushPopRows();
       this.saveVariables();
       this.resetVariables();
       
@@ -147,8 +135,25 @@ export class HomePage {
   }
 
 
+  private pushPopRows() {
+      this.rows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
+      this.copyRows.push({ name: this.workout, setCounter: this.setCounter, repCounter : this.repCounter, weight: this.Weight});
+      if(this.counter == 1)
+      {
+          this.copyRows.pop();
+      }
+      this.counter++;
+  }
 
-
+  private intializeVariables() {
+    this.sets = 0;
+    this.counter = 0;
+    this.setCounter = 0;
+    this.repCounter = 0;
+    this.rsCounter = 0;
+    this.displayWorkout = false;
+    this.lockerNumber = true;
+  }
 
 
 }
