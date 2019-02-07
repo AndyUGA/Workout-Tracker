@@ -71,7 +71,6 @@ export class HomePage {
   //Increments rep counter variable by 1
   incrementReps() 
   {
-    //this.repCounter += 1;
     this.numberIsValid(this.repCounter, "addRep")
   }
 
