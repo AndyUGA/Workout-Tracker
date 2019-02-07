@@ -39,8 +39,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
     this.intializeVariables();
-    
- 
+
+
 
     }
 
@@ -55,40 +55,40 @@ export class HomePage {
 
     }
 
-    else 
+    else
     {
-      
+
       this.pushPopRows();
       this.saveVariables();
       this.resetVariables();
-      
-      
+
+
     }
-  
+
   }
 
 
   //Increments rep counter variable by 1
-  incrementReps() 
+  incrementReps()
   {
     this.numberIsValid(this.repCounter, "addRep")
   }
 
   //Increments set counter variable by 1
-  incrementSets() 
+  incrementSets()
   {
     this.numberIsValid(this.setCounter, "addSet")
   }
 
   //Decrement rep counter variable by 1
-  decrementReps() 
+  decrementReps()
   {
 
     this.numberIsValid(this.repCounter, "subRep");
   }
 
   //Decrement set counter variable by 1
-  decrementSets() 
+  decrementSets()
   {
     this.numberIsValid(this.setCounter, "subSet")
   }
@@ -109,9 +109,9 @@ export class HomePage {
   }
 
 
- 
+
   //Resets set, rep, workout, and weight variable
-  resetVariables() 
+  resetVariables()
   {
     this.setCounter = 0;
     this.repCounter = 0;
@@ -120,8 +120,7 @@ export class HomePage {
   }
 
   //Loads previous workout that user added
-  loadPreviousWorkout() 
-  {
+   {
     this.workout = this.copyWorkout;
     this.setCounter = this.copySetCounter;
     this.repCounter = this.copyRepCounter;
@@ -129,7 +128,7 @@ export class HomePage {
   }
 
   //Saves variables into temp varible
-  saveVariables() 
+  saveVariables()
   {
     this.copyWeight = this.Weight;
     this.copyWorkout = this.workout;
@@ -137,14 +136,14 @@ export class HomePage {
     this.copyRepCounter = this.repCounter;
   }
 
-  
+
   //Loads default value of 1 set and 8 reps
   loadDefault() {
     this.setCounter = 1;
     this.repCounter = 8;
   }
 
-  setupScreen() 
+  setupScreen()
   {
     this.counter++;
     this.lockerNumber = false;
